@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bt1(){
+            if (id==""){
+                alert("아이디 또는 패스워드를 입력하셔야 합니다")
+                document.getElementById("user_id").focus()
+
+            }
+            else{
+                alert("id 입력된 값: "+id)
+                frm.submit()    
+            }
+            frm.submit()
+            id= document.getElementById("user_id").focus()
+        }
+    </script>
+</head>
+<body>
+    <!-- form:정보를 입력하는 태그, action:이동주소, method:전송방식 -->
+    <!-- get방식은 url에 입력한 정보를 노출시키고, post:숨겨서 보냄-->
+    <!-- form name은 굳이 적지 않아도 된다-->
+    <form action="https://www.daum.net/" method="get" name="frm">
+        <label for="user_id">아이디</label>
+        <!-- action:input 정보데이터를 가지고 액션페이지로 이동한다 -->
+        <!-- (아이디,비번)데이터를 가지고 '다음'페이지로 이동한다-->
+        <input type="text" name="id" id="user_id" ><br>
+        <!-- id: 위치값,쉽게 좌표값이라고 생각하면 된다-->
+        <label>패스워드</label>
+        <input type="text" name="pw"><br>
+        <input type="button" onclick="btn1" value="로그인">
+        <label>남자</label>
+        <input type="radio" name="jender" value="남자">
+        <label>여자</label>
+
+    </form>
+    
+</body>
+</html>
