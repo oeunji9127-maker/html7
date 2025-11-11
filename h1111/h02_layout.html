@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding:0; margin:0;}
+        span,div{border:1px solid black;}
+        span{width:50%; height:100px; display:inline-block;}
+        #s02{display:none;}
+        /*
+        1.블록요소: width, height지정가능, 옆공간이 있어도 "하단배치"
+         - display:block;
+
+        2.인라인요소: width,height지정불가, 옆으로 배치
+         - form,img,span,a
+
+        3.인라인블록요소: width,height지정가능, 옆으로배치
+         - display:inline-block;
+        
+         */
+
+
+        div{width:200px; height:100px; margin:30px;
+        box-sizing:border-box;}
+    </style>
+</head>
+<body>
+    <span>1</span>
+    <span id="s02">2</span>
+    <span>3</span>
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+    
+</body>
+</html>
