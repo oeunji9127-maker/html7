@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function btn1(){
+            id = document.getElementById("user_id").value}
+    </script>
+    <style>
+        *{padding:0; margin:0;}
+        header{width:100%; height:125px;
+        margin-bottom:30px;}
+        
+        .HT{width:1200px; height:125px;
+            display:flex; margin:0 auto;}
+
+        .logo{width:120px; height:120px;}
+
+        .logo img{width:120px; height:120px;}
+        
+        .menu{width:1050px; height:120px; 
+            margin:0 auto;}
+
+        .s-menu{width:600px; height:35px; margin-left:400px;}
+        .s-menu ul{display:flex; list-style:none; justify-content:flex-end;}
+        .s-menu ul li{width:75px; height:32px; font-size:10px; line-height:50px; text-align:center;
+            color:#8a8d8f;}
+        .s-menu ul li:nth-child(1){width:65px;}
+        .s-menu ul li:nth-child(4){width:65px;}
+        .s-menu ul li:nth-child(5){width:55px;}
+        .s-menu ul li:after{
+            content:"|";
+            font-size:10px;
+            display:inline-block;
+            margin:0 5px;
+
+        }
+        .m-menu{width:900px; height:90px; margin-left:100px;}
+        .m-menu ul{display:flex; list-style:none; justify-content:space-between;}
+        .m-menu ul li{width:120px; height:87px; font-size:20px; line-height:120px; text-align:center;}
+        .banner{width:100%; height:320px;
+        background:url("image/risom02.jpg"); background-size:cover;}
+        .contents{width:1000px; height:160px; margin:0 auto;}
+        .sm01 ul{list-style:none; display:flex; justify-content:flex-end;}
+        .sm01 ul li{width:50px; height:25px; text-align:center;}
+        .sm01 ul li:after{
+            content:"|";
+            display:inline-block;
+            font-size:8px;
+            margin:0 13px;
+            color: black;
+        }
+        .sm01 ul li:last-child:after{
+            content:"";
+            margin:0 0 0 13px;
+        }
+        .sm01 ul li:nth-child(2){width:90px;}
+        .sm02{width:1000px; height:80px;}
+        .sm02 h1{font-size:50px; font-weight:700;}
+        .sm03 form{width:480px; height:25px; margin-left:530px;}
+        .sm03 form select{width:70px; height:25px; margin:15px; border:1px solid #8a8d8f; color:black;}
+        .sm03 form input[type="text"]{width:300px; height:25px; border:1px solid #8a8d8f; color:black;}
+        .sm03 form input[type="button"]{width:50px; height:25px; background-color:#8a8d8f; color:black;}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="HT">
+            <div class="logo">
+                <img src="image/forest.jpg">
+            </div>
+            <div class="menu">
+                <div class="s-menu">
+                    <ul>
+                        <li>회원예약</li>
+                        <li>패키지 예약</li>
+                        <li>부대시설 예약</li>
+                        <li>회원가입</li>
+                        <li>로그인</li>
+
+                    </ul>
+                </div>
+                <div class="m-menu">
+                    <ul>
+                        <li>포레스트</li>
+                        <li>스파</li>
+                        <li>객실</li>
+                        <li>특별한 경험</li>
+                        <li>부대시설</li>
+                        <li>브랜드소개</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="banner"></div>
+    <div class="contents">
+        <div class="sm01">
+            <ul>
+                <li>홈</li>
+                <li>포레스트</li>
+                <li>뉴스</li>
+
+            </ul>
+        </div>
+        <div class="sm02"><h1>뉴스</h1></div>
+        <div class="sm03">
+            <form action="#" method="get">
+                <select name="serch-T">
+                    <option value="title">제목</option>
+                    <option value="conten">내용</option>
+                <input type="text" name="content" id="content">
+                <input type="button" onclick="btn1()" value="검색">
+
+                 
+        </div>
+
+    </div>
+    
+</body>
+</html>

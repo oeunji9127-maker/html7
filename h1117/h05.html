@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{color:blue;}
+        .red{color:red;}
+    </style>
+</head>
+<body>
+    <h1 class="c">과일목록</h1>
+    <ul>
+        <li class="c">바나나</li>
+        <li class="red">사과</li>
+        <li class="red">배</li>
+        <li class="c">복숭아</li>
+        <li id="d01">딸기</li>
+        <li class="red">수박</li>
+        
+    </ul>
+    <script>
+        alert("경고창을 생성")
+        //document.querySelector("#d01"): d01의 위치값을 찾으므로 출력값은
+        //<h1 id="d01">딸기</li>가 출력이됨
+            
+        document.querySelector("#d01").innerText = "딸기가 먹고파"
+        
+    </script>
+</body>
+</html>

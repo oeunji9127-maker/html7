@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /* 자바스크립트에서 html태그의 값을 가져오는 방법
+        input 값을 가져올때: value
+        나머지 값은: innerText
+        html을 가져오려면: innerHtml
+
+        html위치점 찾기:
+        - document.*/
+
+        function loginBtn(){
+            alert("함수호출")
+            //자바스크립트는 html과 같이 사용됨
+            //자바스크립트에서 특정한곳에 값을 입력하려면
+            //1.먼저 위치파악. 2.값을 입력
+            //html문서에서(document) 입력된 값의 주소를 찾아가는 문구: querySelector
+
+            document.quertySelector(".pw").value;
+            document.querySelector("#id").value;
+            document.querySelector("#labelTxt").innerText;
+
+        }
+        //제어문
+        //조건문,반복문,선택문
+
+        /*var num=0;
+        if(num<500){ //조건문 한줄: 중괄호 생략가능, 두줄이상 생략불가
+            document.write("500미만입니다");
+        }
+        else{
+            document.write("500초과입니다")
+        }*/
+
+        //숫자를 입력받아 60점이상 합격, 60점미만 불합격 출력하시오
+        
+        //var score= Nunber(prompt("시험점수를 입력하시오"))//입력창에서 바로 형변환 시켜줄수있다
+        /*if(score>=60){
+            document.write("시험에 합격되셨습니다")
+        }
+        else document.write("시험에 불합격되셨습니다")*/
+
+        /*var num=prompt("숫자를 입력하세요");
+        if(num%2==0) document.write("짝수입니다");
+        else document.write("홀수입니다");*/ 
+    
+    </script>
+    <form action="#" method="get">
+        <lable id="labelTxt">아이디</lable>
+        <input type="text" name="id" id="id"><br>
+        <label>패스워드</label>
+        <input type="text" name="pw" class="pw"><br>
+        <span id="txt"></span><br>
+        <input type="button" onclick="loginBtn()" value="로그인">
+        
+        <button type="button">로그인</button>
+    </form>
+</body>
+</html>

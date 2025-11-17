@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //타입변환: Number(), toString(), Boolean()
+        //prompt는 "입력창(input)"이므로 모두 문자열로 입력된다
+        /*자바스크립트 특징: 문자열숫자와 문자열숫자를 *,-,/를 하면 자동형변환이됨
+                        - 더하기는 자동형변환이 안되고 문자열로 인식됨
+                        문자열 + 숫자: 문자열로 인식됨*/ 
+        
+    
+        //증감연산자
+        /* b= a++: a의 값을 b변수에 집어넣고, 그다음 1증가
+           b= ++a: a의 값에 1을 증가시키고 b변수에 집어넣기*/
+
+        //prompt(),docment.write()을 사용해서
+        //2개의 숫자를 입력받아 더하기,빼기,곱하기,나누기 결과값을 출력하시오
+
+        let a= prompt("숫자1을 입력하세요 >> ");
+        let b= prompt("숫자2을 입력하세요 >> ");
+        document.write("더하기: ",Number(a)+Number(b),"<br>");
+        document.write("빼기: ",Number(a)-Number(b),"<br>");
+        document.write("곱하기: ",Number(a)*Number(b),"<br>");
+        document.write("나누기: ",Number(a)/Number(b),"<br>");
+
+        
+    </script>
+</body>
+</html>
+

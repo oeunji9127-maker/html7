@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th{border:1px solid black; border-collapse: collapse;}
+        table{margin:20px auto; text-align:center;}
+        th{width:50px; height:30px;}
+    </style>
+</head>
+<body>
+    <table>
+        <tbody id="tbody">
+            
+        </tody>
+    </table>
+    <script>
+        console.log(document.querySelector("#tbody"));
+        tbody= document.querySelector("#tbody")
+        
+        for(var i=2; i<=9; i++){
+            tbody.innerHTML+= `
+            <tr>
+                <td colspan=5> [${i}단]</td>
+            </tr>
+            `;
+            for(var j=1; j<=9; j++){
+                    tbody.innerHTML+= `
+                    <tr>
+                        <th>${i}</th>
+                        <th>X</th>
+                        <th>${j}</th>
+                        <th>=</th>
+                        <th>${i*j}</th><br>
+                    </tr>
+            `
+            }   
+        }    
+
+
+
+        /*sum=0;
+        for (var i=1;sum<=100; i++){
+            document.write(i, ">> ",sum,"+",i,"=",sum+=i,"<br>")    
+        }
+        document.write("합계가 100을 넘는 시점: ",i-1,"/","그때의 합계: ",sum)*/
+    </script>
+</body>
+</html>

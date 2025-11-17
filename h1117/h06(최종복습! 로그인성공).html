@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>아이디</label>
+    <input type="text" name="id" id="id">
+    
+    <label>비밀번호</label>
+    <input type="text" name="pw" id="pw" onkeyup="loginBtn()"><br>
+
+    <input type="button" value="로그인"><br>
+    <span id="Log"></span>
+    
+    <script>
+        function loginBtn(){
+            //id=aaa pw=1111 로그인성공, 아이디 또는 패스워드가 일치하지 않습니다
+            
+            var Input_id= document.querySelector("#id").value;
+            var Input_pw= document.querySelector("#pw").value;
+            console.log(id)
+            console.log(Input_id)
+            console.log(pw)
+            console.log(Input_pw)
+
+            if(Input_id=="aaa" && Input_pw=="11") {
+                document.querySelector("#Log").innerText="로그인성공"
+            }
+            else document.querySelector("#Log").innerText="아이디 또는 패스워드가 잘못되었습니다"
+        
+        }
+
+
+            
+            
+            /*var pw= document.querySelector("#pw").value;
+            var pw2= document.querySelector("#pw2").value;
+            console.log(pw);
+            console.log(pw2);
+
+            if(pw==pw2){
+                document.querySelector("#pwTxt").innerHTML="<div style='color:blue';>비밀번호가 일치합니다</div>"
+            }
+            else {
+                document.querySelector("#pwTxt").innerHTML="<div style='color:red';>비밀번호가 일치하지 않습니다</div>"
+            }*/
+             
+        
+    </script>
+</body>
+</html>
