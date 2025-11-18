@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>이름</label>
+    <input type="text" id="name" onkeyup="keyBtn(event)"  placeholder="이름을 입력하시오">
+    <button type="button" onclick="saveBtn(event)">저장</button>
+    <div id="txt"></div>
+    
+    
+    <script>
+        var arr=["홍길동","유관순","이순신"]
+
+        function keyBtn(event){
+            console.log("입력한 키값: ",event.keyCode);
+            if(event.keyCode==13){
+                saveBtn(event);
+            }
+
+        }
+        function saveBtn(){
+            arr.push(document.querySelector("#name").value);
+            document.querySelector("#txt").innerText=arr;
+        }
+
+    </script>
+</body>
+</html>
