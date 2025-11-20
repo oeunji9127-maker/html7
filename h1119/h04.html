@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //자바스크립트 객체-파이썬과 통신
+        var stu= {
+            "num":1, "name":"홍길동", "kor":100, "eng":100
+        }
+        var stu= {
+            "num":1, "name":"홍길동", "kor":100, "eng":100
+        }
+        console.log(stu);
+        console.log(stu.num);
+        //웹에서 다른웹으로 전달시 객체형태로 전달을 하면 해석이 안됨
+
+        console.log(JSON.stringify(stu));//JSON문자열로 출력
+        console.log(JSON)
+    </script>
+</body>
+</html>

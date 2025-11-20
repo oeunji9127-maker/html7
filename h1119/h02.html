@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        //제이쿼리구문
+        $(function(){
+            //제이쿼리 이벤트처리- 동적처리가능
+            $(document).on("click","#btn",function(){
+                alert("111 확인")
+            })
+            
+            //이벤트처리- 정적처리만 가능, 2개이벤트사용은 불가,장점은 길이가 짧음
+            $("#btn").click(function(){})
+            
+
+
+
+            //자바스크립트 이벤트처리
+            //document.querySelector("#btn").addEventListener("click,"function())
+        });
+    </script>
+</head>
+<body>
+    <div>내용1</div>
+    <div>내용2</div>
+    <button type="button" id="btn">확인</button>
+</body>
+</html>
