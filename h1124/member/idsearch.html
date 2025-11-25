@@ -188,87 +188,58 @@ $(document).ready(function() {
 		<div id="location">
 			<ol>
 				<li><a href="#">HOME</a></li>
-				<li><a href="#">CUSTOMER</a></li>
-				<li class="last">NOTICE</li>
+				<li><a href="#">MEMBERSHIP</a></li>
+				<li class="last">아이디/비밀번호 찾기</li>
 			</ol>
 		</div>
 		
 		<div id="outbox">		
 			<div id="left">
-				<div id="title2">CUSTOMER<span>고객센터</span></div>
+				<div id="title2">MEMBERSHIP<span>멤버쉽</span></div>
 				<ul>	
-					<li><a href="#" id="leftNavi1">NOTICE</a></li>
-					<li><a href="#" id="leftNavi2">1:1문의</a></li>
-					<li><a href="#" id="leftNavi3">FAQ</span></a></li>
-					<li class="last"><a href="#" id="leftNavi4">이용안내</a></li>
+					<li><a href="#" id="leftNavi1">로그인</a></li>
+					<li><a href="#" id="leftNavi2">회원가입</a></li>
+					<li><a href="#" id="leftNavi3">아이디/<span>비밀번호 찾기</span></a></li>
+					<li><a href="#" id="leftNavi4">회원약관</a></li>
+					<li><a href="#" id="leftNavi5">개인정보<span>취급방침</span></a></li>
+					<li class="last"><a href="#" id="leftNavi6">이메일무단<span>수집거부</span></a></li>
 				</ul>			
-			</div><script type="text/javascript">initSubmenu(1,0);</script>
+			</div><script type="text/javascript">initSubmenu(3,0);</script>
 
 
 			<!-- contents -->
 			<div id="contents">
-				<div id="customer">
-					<h2><strong>NOTICE</strong><span>쟈뎅샵 소식을 전해드립니다.</span></h2>
-
-					<div class="viewDivMt">
-						<div class="viewHead">
-							<div class="subject">
-								<ul>
-									<li>쟈뎅 전문 쇼핑몰 쟈뎅샵이 리뉴얼 오픈합니다.</li>
-								</ul>
-							</div>
-							<div class="day">
-								<p class="txt">작성일<span>14.01.28</span></p>
-							</div>
-						</div>
-
-						<div class="viewContents">
-							안녕하세요. 쟈뎅샵입니다.<br/>
-							늘 저희 쟈뎅을 사랑해주시는 많은 고객님들께 감사 인사드립니다.<br/>
-							변함없는 고객님들의 사랑에 보답하고자, 쟈뎅이 온라인 쇼핑몰을 새롭게 리뉴얼 오픈하게 되었습니다.<br/>
-							기존에 tea24로 이용하시던 쟈뎅 제품 전문 쇼핑몰이 쟈뎅샵(jardinshop)이라는 새로운 공간으로<br/>
-							오픈하게 되었습니다.<br/>
-							더욱 새로운 모습과 늘 발전하는 모습으로 찾아뵙도록 하겠습니다.<br/><br/>
-
-							감사합니다.
-						</div>
-					</div>
-
-
-					<!-- 이전다음글 -->
-					<div class="pnDiv web">
-						<table summary="이전다음글을 선택하여 보실 수 있습니다." class="preNext" border="1" cellspacing="0">
-							<caption>이전다음글</caption>
-							<colgroup>
-							<col width="100px" />
-							<col width="*" />
-							</colgroup>
-							<tbody>
-								<tr>
-									<th class="pre">PREV</th>
-									<td><a href="#">상품 재입고는 언제 되나요?</a></td>
-								</tr>
-
-								<tr>
-									<th class="next">NEXT</th>
-									<td>다음 글이 없습니다.</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<!-- //이전다음글 -->
-
-
-					<!-- Btn Area -->
-					<div class="btnArea btline">
-						<div class="bRight">
+				<div id="member">
+					<h2><strong>아이디/비밀번호 찾기</strong><span>회원님께서 가입하신 아이디와 비밀번호를 찾아드립니다.</span></h2>
+					<h3>아이디 찾기</h3>
+					<div class="informbox">
+						<div class="inform">
 							<ul>
-								<li><a href="#" class="sbtnMini mw">목록</a></li>
+								<li><input type="text" class="nameType" onfocus="this.className='mfocus'" onblur="if (this.value.length==0) {this.className='nameType'}else {this.className='mfocusnot'}" style="ime-mode:inactive;" /></li>
+								<li><input type="password" class="emailType" onfocus="this.className='mfocus'" onblur="if (this.value.length==0) {this.className='emailType'}else {this.className='mfocusnot'}" style="ime-mode:inactive;" /></li>
 							</ul>
+
+							<div class="btn"><a href="#" class="gbtn">아이디 찾기</a></div>
 						</div>
 					</div>
-					<!-- //Btn Area -->
-					
+
+
+
+					<h3>비밀번호 찾기</h3>
+					<div class="informbox">
+						<div class="inform">
+							<ul>
+								<li><input type="text" class="loginType" onfocus="this.className='mfocus'" onblur="if (this.value.length==0) {this.className='loginType'}else {this.className='mfocusnot'}" /></li>
+								<li><input type="text" class="emailType" onfocus="this.className='mfocus'" onblur="if (this.value.length==0) {this.className='emailType'}else {this.className='mfocusnot'}" /></li>
+							</ul>
+
+							<div class="btn"><a href="#" class="gbtn">비밀번호 찾기</a></div>
+						</div>
+					</div>
+
+
+					<p class="alert">쟈뎅 온라인 쇼핑몰에서는 2012년 8월 18일로 시행되는 정보통신망 이용 촉진 및 정보 보호 등에 관한 법률 “주민등록번호의 <span>사용 제한”과 관련하여 주민등록번호를 수집하지 않습니다.</span></p>
+
 				</div>
 			</div>
 			<!-- //contents -->

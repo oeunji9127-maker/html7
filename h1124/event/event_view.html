@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="../css/reset.css?v=Y" />
 <link rel="stylesheet" type="text/css" href="../css/layout.css?v=Y" />
 <link rel="stylesheet" type="text/css" href="../css/content.css?v=Y" />
+
+
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 
@@ -20,27 +22,21 @@
 <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="../js/idangerous.swiper-2.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.anchor.js"></script>
-
+<style>
+	a{cursor:pointer;}
+</style>
 <script type="text/javascript">
+$(document).ready(function() {
+	
 
-	/*$(function(){
-	$.ajax({
-		url:"",
-		type:"get",
-		dataType:"json",
-		data:{},
-		success:function(data){
-			alert("하단댓글을 가져옵니다");
-			console.log(data);
-		},
-		error:function(){alert("실패");}
 
-	});//ajax
-});//jquery*/
+});
 </script>
-<style> a{cursor:pointer;}</style>
 </head>
 <body>
+
+
+
 <!--익스레이어팝업-->
 <div id="ieUser" style="display:none">
 	<div class="iewrap">	
@@ -95,21 +91,23 @@
 
 	<div id="header">
 		
-		<div id="snbBox">
-			<h1><img src="../images/txt/logo.gif" alt="JARDIN SHOP" /></h1>
+		<h1>
+			<a href="../main.html" ><img src="../images/txt/logo.gif" alt="JARDIN SHOP" />
+			</a>
+		</h1>
 			<div id="quickmenu">
 				<div id="mnaviOpen"><img src="../images/btn/btn_mnavi.gif" width="33" height="31" alt="메뉴열기" /></div>
 				<div id="mnaviClose"><img src="../images/btn/btn_mnavi_close.gif" width="44" height="43" alt="메뉴닫기" /></div>
 				<ul>
-					<li><a href="#">EVENT</a></li>
+					<li><a href="event.html">EVENT</a></li>
 					<li><a href="#">CUSTOMER</a></li>
 					<li><a href="#">COMMUNITY</a></li>
 				</ul>
 			</div>
 			<div id="snb">
 				<ul>
-					<li><a href="#">LOGIN</a></li>
-					<li><a href="#">JOIN</a></li>
+					<li><a href="../member/login.html">LOGIN</a></li>
+					<li><a href="../member/step01.html">JOIN</a></li>
 					<li><a href="#">MY PAGE</a></li>
 					<li><a href="#">CART</a></li>
 				</ul>
@@ -261,113 +259,173 @@
 					<!-- //이전다음글 -->
 
 					<script>
-						let cno= 2;
+						let cno=2; //전역변수
+						let id= "aaa";
+						let cpw,ccontent,cdate,flag=0; 
+
 						$(function(){
-
-							//keycode함수
-							$(".replyTxt").keyup(function(e){
-								console.log($(this))
-							})
 							
-							//등록버튼 클릭함수
-							$(".replyBtn").click(function(){
+							// 댓글등록버튼
+							$(document).on("click",".replyBtn",function(){
 								
-								alert("확인")
-								let ul= $(this).closest("ul")
+								let ul= $(this).closest("ul");
+								cpw= ul.find(".replynum").val();
+								ccontent= ul.find(".replyType").val();
+								cdate= today();
+								console.log(cpw,ccontent);
 								
-								// 1.댓글내용 확인
-								if(ul.find(".replyType").val().length<=0){
-									alert("댓글내용을 입력하셔야 합니다")
-									ul.find(".replyType").focus()
-									return;
-								}//if함수
-
-								let id= "aaa"
-								let cpw= ul.find(".replynum").val()
-								let ccontent= ul.find(".replyType").val()
-								let cdate= todayTime()//날짜시간함수 호출
-
-
-
-								// 2.댓글출력
-								let dataHTML=``
-								dataHTML+=`
-								<ul id=${cno}>
-									<li class="name">${id}<span>${cdate}</span></li>
+								dataHTML=`
+								<ul id="${cno}">
+									<li class="name">${id} <span>[${cdate}]</span></li>
 									<li class="txt">${ccontent}</li>
 									<li class="btn">
 										<a class="rebtn updateBtn">수정</a>
 										<a class="rebtn deleteBtn">삭제</a>
 									</li>
 								</ul>
-								`
-								cno++; //번호1씩증가
-	
-								//댓글리스트 앞에추가
+								
+								`;
 								$(".replyBox").prepend(dataHTML);
-								ul.find(".replynum").val("")
-								ul.find(".replyType").val("")
-								alert("댓글을 저장합니다")
+								input_deltete();
+								
+								cno++ //댓글등록이 되면 번호1증가
+								alert("등록되었습니다")
 
-							})//reply.Btn
+							})//replyBtn
 
-							//등록버튼함수
+							// 댓글삭제
+							$(document).on("click",".deleteBtn",function(){
+								alert("댓글을 삭제합니다");
+								let ul= $(this).closest("ul");
+								let no= ul.attr("id");
+								if(confirm(no+"번 댓글을 정말 삭제하시겠습니까?")){
+								ul.remove();
+							}
+							})//deleteBtn
+
+							// 수정화면
+							$(document).on("click",".updateBtn",function(){
+								
+								if(flag==1){
+									alert("다른 수정창을 닫으셔야 수정이 가능합니다");
+									return;
+									
+								}
+								alert("댓글을 수정합니다");
+								let ul= $(this).closest("ul");
+								let no= ul.attr("id");
+								cdate= ul.find("span").text();
+								ccontent=ul.find(".txt").text();
+								let dataHTML= `
+								<ul>
+									<li class="name">${id} <span>${cdate}</span></li>
+									<li class="txt"><textarea class="replyType">${ccontent}</textarea></li>
+									<li class="btn">
+										<a class="rebtn usaveBtn">완료</a>
+										<a class="rebtn ucancelBtn">취소</a>
+									</li>
+								</ul>
+								`;
+								$("#"+no).html(dataHTML);
+								flag==1;
+
+							})//updateBtn
+
+							// 수정취소
+							$(document).on("click",".ucancelBtn",function(){
+								flag=0;
+								alert("댓글수정을 취소합니다");
+								let no= ul.attr("id");
+								let dataHTML=`
+									<li class="name">${id} <span>[${cdate}]</span></li>
+									<li class="txt">${ccontent}</li>
+									<li class="btn">
+										<a class="rebtn updateBtn">수정</a>
+										<a class="rebtn deleteBtn">삭제</a>
+									</li>
+								`;
+								$("#"+no).html(dataHTML);
+							})
+
+							// 수정완료
+							$(document).on("click",".usaveBtn",function(){
+								flag=0;
+								alert("댓글수정을 완료합니다")
+								let ul= $(this).closest("ul");
+								let no= ul.attr("id");
+								ccontent= ul.find(".replyType").val()
+								cdate= today();
+								let dataHTML=`
+									<li class="name">${id} <span>[]${cdate}/span></li>
+									<li class="txt">${ccontent}</li>
+									<li class="btn">
+										<a class="rebtn updateBtn">수정</a>
+										<a class="rebtn deleteBtn">삭제</a>
+									</li>
 							
+								`;
+								$("#"+no).html(dataHTML);
+							})
 
+							//입력창지우기
+							const input_delete=function(){
+								$(".replynum").val("");
+								$(".replyType").val("");
+							}
 
-							//날짜시간함수()
-							const todayTime= function(){
-								let now = new Date() //날짜객체선언
+							
+							//현재날짜 가져오는 함수
+
+							const today= function(){
+								let now= new Date();
 								let year= now.getFullYear();
 								let month= now.getMonth()+1;
 								let day= now.getDate();
 								let hour= now.getHours();
 								let minute= now.getMinutes();
 								let second= now.getSeconds();
+								
+								return `${year}-${month}-${day}  ${hour}:${minute}:${second}`
 
-								return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
-							}//
-
-
+							}//today
 
 						})//jquery
 					</script>
 					<!-- 댓글-->
 					<div class="replyWrite">
-						<ul id="1">
+						<ul>
 							<li class="in">
 								<p class="txt">총 <span class="orange">3</span> 개의 댓글이 달려있습니다.</p>
 								<p class="password">비밀번호&nbsp;&nbsp;<input type="password" class="replynum" /></p>
-								<textarea class="replyType replyTxt"></textarea>
+								<textarea class="replyType"></textarea>
 							</li>
-							<li class="btn">
-								<a class="replyBtn">등록</a>
-							</li>
+							<li class="btn"><a class="replyBtn">등록</a></li>
 						</ul>
 						<p class="ntic">※ 비밀번호를 입력하시면 댓글이 비밀글로 등록 됩니다.</p>
 					</div>
 
 					<div class="replyBox">
 						
-						<ul>
-							<li class="name">jjabcde <span>[2014-03-04&nbsp;&nbsp;15:01:59]</span></li>
+
+						<ul id="1">
+							<li class="name">aaa <span>[2014-03-04&nbsp;&nbsp;15:01:59]</span></li>
 							<li class="txt">대박!!! 이거 저한테 완전 필요한 이벤트였어요!!</li>
 							<li class="btn">
 								<a class="rebtn updateBtn">수정</a>
 								<a class="rebtn deleteBtn">삭제</a>
 							</li>
 						</ul>
-						
-						<!--댓글 수정부분-->
-						<!--
+
+						<!--수정창
 						<ul>
 							<li class="name">jjabcde <span>[2014-03-04&nbsp;&nbsp;15:01:59]</span></li>
 							<li class="txt"><textarea class="replyType"></textarea></li>
 							<li class="btn">
-								<a href="#" class="rebtn">수정</a>
-								<a href="#" class="rebtn">삭제</a>
+								<a class="rebtn usaveBtn">완료</a>
+								<a class="rebtn ucancelBtn">취소</a>
 							</li>
 						</ul>
+
 
 						<ul>
 							<li class="name">jjabcde <span>[2014-03-04&nbsp;&nbsp;15:01:59]</span></li>
@@ -375,8 +433,8 @@
 								<a href="password.html" class="passwordBtn"><span class="orange">※ 비밀글입니다.</span></a>
 							</li>
 						</ul>
+						-->
 					</div>
-				-->
 					<!-- //댓글 -->
 
 

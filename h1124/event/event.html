@@ -88,13 +88,16 @@ $(document).ready(function() {
 
 	<div id="header">
 		
-		<div id="snbBox">
-			<h1><img src="../images/txt/logo.gif" alt="JARDIN SHOP" /></h1>
+		<h1>
+			<a href="../main.html" ><img src="../images/txt/logo.gif" alt="JARDIN SHOP" />
+			</a>
+		</h1>
+		
 			<div id="quickmenu">
 				<div id="mnaviOpen"><img src="../images/btn/btn_mnavi.gif" width="33" height="31" alt="메뉴열기" /></div>
 				<div id="mnaviClose"><img src="../images/btn/btn_mnavi_close.gif" width="44" height="43" alt="메뉴닫기" /></div>
 				<ul>
-					<li><a href="#">EVENT</a></li>
+					<li><a href="../member/login.html">EVENT</a></li>
 					<li><a href="#">CUSTOMER</a></li>
 					<li><a href="#">COMMUNITY</a></li>
 				</ul>
@@ -188,197 +191,74 @@ $(document).ready(function() {
 		<div id="location">
 			<ol>
 				<li><a href="#">HOME</a></li>
-				<li><a href="#">CUSTOMER</a></li>
-				<li class="last">FAQ</li>
+				<li><a href="#">EVENT</a></li>
+				<li class="last">진행중 이벤트</li>
 			</ol>
 		</div>
 		
 		<div id="outbox">		
 			<div id="left">
-				<div id="title2">CUSTOMER<span>고객센터</span></div>
+				<div id="title2">EVENT<span>이벤트</span></div>
 				<ul>	
-					<li><a href="#" id="leftNavi1">NOTICE</a></li>
-					<li><a href="#" id="leftNavi2">1:1문의</a></li>
-					<li><a href="#" id="leftNavi3">FAQ</span></a></li>
-					<li class="last"><a href="#" id="leftNavi4">이용안내</a></li>
+					<li><a href="#" id="leftNavi1">진행중 이벤트</a></li>
+					<li><a href="#" id="leftNavi2">종료된 이벤트</a></li>
+					<li class="last"><a href="#" id="leftNavi3">당첨자 발표</a></li>
 				</ul>			
-			</div><script type="text/javascript">initSubmenu(3,0);</script>
+			</div><script type="text/javascript">initSubmenu(1,0);</script>
 
 
 			<!-- contents -->
 			<div id="contents">
-				<div id="customer">
-					<h2><strong>FAQ</strong><span>회원님들께서 자주 묻는 질문들을 모아 놓았습니다.</span></h2>
+				<div id="mypage">
+					<h2><strong>진행중 이벤트</strong><span>쟈뎅샵의 특별한 혜택이 가득한 이벤트에 참여해 보세요.</span></h2>
 					
-					<div class="faqTab">
+					<!-- list -->
+					<div class="eventList">
 						<ul>
-							<li><a href="#" class="on">전체</a></li>
-							<li class="dep"><a href="#">회원가입</a></li>
-							<li><a href="#">상품</a></li>
-							<li class="last"><a href="#">주문</a></li>
-						</ul>						
-					</div>	
-					
-					<!-- FAQ -->
-					<div class="faqList">
-						<ul>
-							<!-- list -->
+							<!-- 반복 -->
 							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">상품</div>
-										<div class="title">주문 상품의 수량을 변경하고 싶어요.</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
+								<div class="img">
+									<a href="event_view.html"><img src="../images/img/sample_event.jpg" alt="진행중 이벤트" /></a>
+								</div>
+								<div class="txt">
+									<div class="subject">까페모리 봄바람 커피한잔 30% 할인 이벤트!!까페모리 봄바람 커피한잔 30% 할인 이벤트!!</div>
+									<div class="day">이벤트 기간 : 2014-04-01 ~ 2014-04-29</div>
 								</div>
 							</li>
-							<!-- //list -->
+							<!-- //반복 -->
 
 							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">상품</div>
-										<div class="title">주문 상품의 수량을 변경하고 싶어요.</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
+								<div class="img">
+									<a href="#"><img src="../images/img/sample_event.jpg" alt="진행중 이벤트" /></a>
+								</div>
+								<div class="txt">
+									<div class="subject">까페모리 봄바람 커피한잔 30% 할인 이벤트!!</div>
+									<div class="day">이벤트 기간 : 2014-04-01 ~ 2014-04-29</div>
 								</div>
 							</li>
 
 							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">회원가입</div>
-										<div class="title">회원가입을 하면 어떤 혜택이 있나요?</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
+								<div class="img">
+									<a href="#"><img src="../images/img/sample_event.jpg" alt="진행중 이벤트" /></a>
+								</div>
+								<div class="txt">
+									<div class="subject">까페모리 봄바람 커피한잔 30% 할인 이벤트!!</div>
+									<div class="day">이벤트 기간 : 2014-04-01 ~ 2014-04-29</div>
 								</div>
 							</li>
 
 							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">회원가입</div>
-										<div class="title">회원 탈퇴를 하고 싶습니다</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
+								<div class="img">
+									<a href="#"><img src="../images/img/sample_event.jpg" alt="진행중 이벤트" /></a>
 								</div>
-							</li>
-
-							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">회원가입</div>
-										<div class="title">비밀번호를 잊어버렸습니다.</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">주문</div>
-										<div class="title">주문 상품의 수량을 변경하고 싶어요.</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">주문</div>
-										<div class="title">배송조회가 되지 않습니다.</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
-								</div>
-							</li>
-
-							<li>
-								<a href="javascript:;" class="faqbtn">
-									<div class="question">
-										<div class="blet">Q</div>
-										<div class="category">주문</div>
-										<div class="title">배송은 평균 얼마나 걸리나요?</div>
-									</div>
-								</a>
-
-								<div class="faqanswer">
-									<div class="faqbox">
-										<div class="blet">A</div>
-										<div class="text">
-											<strong><u>소비자상담실(02-546-3881)</u></strong>로 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 연락 주시면 가능 여부에 관하여 답변드리고 있습니다. 
-										</div>
-									</div>
+								<div class="txt">
+									<div class="subject">까페모리 봄바람 커피한잔 30% 할인 이벤트!!</div>
+									<div class="day">이벤트 기간 : 2014-04-01 ~ 2014-04-29</div>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<!-- //FAQ -->
-
+					<!-- //list -->
 
 					<div class="btnAreaList">
 						<!-- 페이징이동1 -->
@@ -395,7 +275,8 @@ $(document).ready(function() {
 						</div>
 						<!-- //페이징이동1 -->
 					</div>
-
+					
+					<!-- 검색 -->
 					<div class="searchWrap">
 						<div class="search">
 							<ul>
@@ -411,12 +292,71 @@ $(document).ready(function() {
 							</ul>
 						</div>
 					</div>
+					<!-- //검색 -->
 
 				</div>
 			</div>
 			<!-- //contents -->
 
 		</div>
+
+		<!-- quickmenu -->
+		<div id="quick">
+			<div class="cart"><a href="#">장바구니</a></div>
+			<div class="wish">
+				<p class="title">위시 리스트</p>
+				
+				<div class="list">
+					<ul>	
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+						<li><a href="#"><img src="../images/img/sample_wish.gif" alt="" /></a>
+					</ul>
+				</div>
+
+				<div class="total">
+					<a href="#none" class="wishLeft"><img src="../images/btn/wish_left.gif" alt="" /></a>
+					 <span class="page">1</span> / <span class="sum">3</span>
+					<a href="#none" class="wishRight"><img src="../images/btn/wish_right.gif" alt="" /></a>
+				</div>
+
+			</div>
+
+			<div class="top"><a href="#">TOP&nbsp;&nbsp;<img src="../images/ico/ico_top.gif" alt="" /></a></div>
+		</div>
+		<script type="text/javascript">
+		$(function(){
+			
+			$(window).scroll(function(){
+				var tg = $("div#quick");
+				var xg = $("div#container");
+				var limit = xg.height()- 500;
+				var tmp = $(window).scrollTop();
+
+				if (tmp > limit) {
+					tg.css({"position" : "absolute","right" : "-150px","bottom" : "220px","top" : "auto"});
+				}
+				else {
+					tg.css({"position" : "fixed","top" : "314px" , "margin-left" : "940px","right" : "auto"});
+				}
+			});
+
+		});
+		</script>
+		<!-- //quickmenu -->
+
 	</div>
 	<!-- //container -->
 
